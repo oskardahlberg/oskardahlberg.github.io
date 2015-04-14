@@ -1,0 +1,619 @@
+/* needs to be completely rewritten */
+@import 'normalize.css';
+@import 'pure.css';
+@import 'ansonregular.css';
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+body {
+  background-color: #b84808;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 150%;
+}
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+a:hover {
+  color: #721;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.logo {
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  font-family: 'ansonregular';
+  color: #fff;
+}
+.logo span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  line-height: 75%;
+  font-size: 50%;
+  font-weight: bold;
+  color: #aaa;
+}
+.aligner {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.aligner > div {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+#border {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: #d51;
+  background: linear-gradient(to right, #d51, #f73);
+  transition: all 0.15s ease-out;
+}
+/* sidebar */
+#sidebar-container {
+  position: relative;
+}
+#sidebar {
+  position: relative;
+  padding-top: 20px;
+  background: #b84808 url("/images/bg.jpg") no-repeat top center;
+  background-size: 150% auto;
+  color: #fff;
+  text-align: center;
+}
+#sidebar .logo {
+  height: 84px;
+  font-size: 56px;
+  line-height: 28px;
+  margin-bottom: 15px;
+  color: #fff;
+  transition: all 0.15s ease;
+}
+/* sidebar - tagline */
+#tagline-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+#tagline {
+  display: inline-block;
+  max-width: 240px;
+  font-size: 12px;
+  color: #f73;
+  text-align: left;
+}
+#tagline strong {
+  line-height: 130%;
+  font-size: 150%;
+  font-style: italic;
+  font-weight: 300;
+  color: #ddd;
+}
+/* sidebar - menu */
+#menu {
+  position: relative;
+  margin-bottom: 15px;
+}
+#menu .toggle,
+#menu input[type=checkbox] {
+  height: 30px;
+  width: 100%;
+  cursor: pointer;
+}
+#menu .toggle {
+  padding: 0 14px 0 5px;
+  line-height: 30px;
+  font-size: 22px;
+  letter-spacing: -8px;
+  text-align: center;
+  color: #721;
+  background: #d51;
+}
+#menu .toggle:before {
+  content: '\039e\039e';
+}
+#menu input[type=checkbox] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+#menu input[type=checkbox]:checked ~ ul {
+  display: block;
+}
+#menu ul {
+  display: none;
+}
+#menu a {
+  position: relative;
+  display: block;
+  min-width: 140px;
+  padding: 3px 12px;
+  font-size: 90%;
+  text-transform: lowercase;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  transition: all 0.15s ease;
+  text-align: left;
+  background-color: #5a1a00;
+  color: #c73;
+}
+#menu a:hover {
+  background-color: #481500;
+  color: #d6925c;
+}
+#menu li:nth-child(1) a {
+  background-color: #ae3200;
+  color: #d6925c;
+}
+#menu li:nth-child(1) a:hover {
+  background-color: #8b2800;
+  color: #e0ad85;
+}
+#menu li:nth-child(2) a {
+  background-color: #9d2d00;
+  color: #d48d54;
+}
+#menu li:nth-child(2) a:hover {
+  background-color: #7e2400;
+  color: #dea87c;
+}
+#menu li:nth-child(3) a {
+  background-color: #8c2900;
+  color: #d2874b;
+}
+#menu li:nth-child(3) a:hover {
+  background-color: #702100;
+  color: #dca374;
+}
+#menu li:nth-child(4) a {
+  background-color: #7c2400;
+  color: #d08243;
+}
+#menu li:nth-child(4) a:hover {
+  background-color: #631d00;
+  color: #da9d6c;
+}
+#menu li:nth-child(5) a {
+  background-color: #6b1f00;
+  color: #ce7c3b;
+}
+#menu li:nth-child(5) a:hover {
+  background-color: #561900;
+  color: #d89864;
+}
+#menu li:nth-child(6) a {
+  background-color: #5a1a00;
+  color: #c73;
+}
+#menu li:nth-child(6) a:hover {
+  background-color: #481500;
+  color: #d6925c;
+}
+/* sidebar - services */
+#services {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#services li {
+  display: inline-block;
+  margin: 0 3px;
+}
+#services a {
+  position: relative;
+  color: #721;
+  transition: color 0.15s ease;
+}
+#services a:hover {
+  color: #fff;
+}
+#services .mail a {
+  margin-bottom: 20px;
+}
+#services .github {
+  height: 14px;
+  line-height: 0;
+}
+#services .github a {
+  display: inline-block;
+  height: inherit;
+}
+#services .github img {
+  height: inherit;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+#services .github img:first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+#services .github a:hover img {
+  opacity: 1;
+}
+#services .github a:hover img:first-child {
+  opacity: 0;
+}
+/* main */
+main {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+main h2 {
+  font-weight: 300;
+  color: #721;
+  text-align: center;
+}
+/* main - intro */
+#intro-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#intro-container + .articles {
+  margin-top: 15px;
+}
+#intro {
+  padding: 15px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 110%;
+  color: #e4e4e4;
+}
+#intro p {
+  text-align: left;
+}
+#intro h2 {
+  margin: 0 0 15px 0;
+  color: #721;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 100%;
+}
+#intro .likes {
+  margin: 5px 0;
+}
+#intro .likes > * {
+  margin: 5px 8px;
+}
+#intro .likes .thumb {
+  vertical-align: middle;
+  height: 100%;
+  width: 34px;
+}
+#intro .likes a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom-color 0.3s ease;
+}
+#intro .likes a:hover {
+  border-bottom-color: #721;
+}
+#intro .likes img {
+  vertical-align: middle;
+  width: 100%;
+}
+/* articles */
+#news h2 {
+  text-align: center;
+  font-weight: 300;
+  color: #aaa;
+}
+#news article {
+  position: relative;
+  margin: 0 0 15px 0;
+  padding: 0 5px;
+}
+#news article h3 {
+  margin: 0 5px 8px 5px;
+  font-weight: 300;
+  font-size: 175%;
+  line-height: 90%;
+  color: #ddd;
+}
+#news article .date {
+  display: block;
+  color: #721;
+  font-size: 85%;
+  line-height: 115%;
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+#news article .body {
+  padding: 4px 8px;
+  border-radius: 2px;
+  background: #f2f2f2;
+}
+#news article p {
+  margin: 4px 0;
+}
+#archive {
+  padding: 8px;
+}
+#archive .date {
+  font-size: 75%;
+  color: #f60;
+}
+#archive .date:before {
+  content: ' - ';
+}
+/* medium */
+@media (min-width: 541px) {
+  body {
+    font-size: 19px;
+  }
+  #sidebar .logo {
+    height: 120px;
+    font-size: 83px;
+    line-height: 40px;
+    margin-top: 40px;
+  }
+  #tagline {
+    font-size: 15px;
+  }
+  #services {
+    font-size: 26px;
+  }
+  #services .github {
+    height: 24px;
+  }
+  #intro p {
+    text-align: center;
+  }
+  #intro h2 {
+    font-size: 64px;
+    padding: 15px 0;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to top right, #721, #a43011 70%);
+    background-image: -o-linear-gradient(transparent, transparent);
+    background-image: -moz-linear-gradient(transparent, transparent);
+    background-image: -ms-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    transition: padding 0.6s ease-out 0.15s, opacity 0.6s ease-out 0.15s;
+  }
+  #app.loading #intro h2 {
+    opacity: 0;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    background-position-y: 35px;
+  }
+  #intro .likes {
+    margin: 30px 0;
+  }
+  #intro .likes > * {
+    margin: 5px 15px;
+  }
+  #intro .likes .thumb {
+    width: 64px;
+  }
+  #intro .likes a {
+    width: 48px;
+  }
+  #news article {
+    padding: 0 10px;
+  }
+  #news article .body {
+    padding: 12px 20px;
+  }
+  #news article p {
+    margin: 10px 0;
+  }
+}
+/* large */
+@media (min-width: 961px) and (min-height: 480px) {
+  body {
+    background-image: url("/images/bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #sidebar-container {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    right: 50%;
+    bottom: 15px;
+    margin-top: 0;
+    margin-right: 235px;
+  }
+  #sidebar {
+    background: none;
+    float: right;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 740px;
+    text-align: left;
+  }
+  #main-container {
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    margin-left: -235px;
+  }
+  main {
+    width: 100%;
+    height: 100%;
+    max-width: 740px;
+    max-height: 740px;
+    margin-left: 20px;
+  }
+  main.intro {
+    max-height: none;
+  }
+  main.intro #news {
+    min-height: 100%;
+    margin-top: 15px;
+  }
+  #sidebar .logo,
+  #tagline-container {
+    top: 70%;
+  }
+  #sidebar .logo {
+    position: absolute;
+    right: 15px;
+    margin-top: -120px;
+    margin-bottom: 0;
+    color: #fff;
+  }
+  #app.reading #sidebar .logo:not(:hover),
+  #app.reading #menu a:not(:hover) {
+    opacity: 0.4;
+  }
+  #tagline-container {
+    position: absolute;
+    left: 0;
+    bottom: 72px;
+    right: 0;
+    margin-bottom: 0;
+  }
+  #menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #services {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #services li {
+    display: block;
+    margin: 0;
+  }
+  #services a {
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #fff 50%, #721 50%, #a31 100%);
+    background-size: 200%;
+    background-position-x: 100%;
+    background-image: -o-linear-gradient(transparent, transparent);
+    background-image: -moz-linear-gradient(transparent, transparent);
+    background-image: -ms-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    transition: background-position 0.3s ease, color 0.15s ease;
+  }
+  #services a img {
+    -webkit-clip-path: polygon(0 0);
+  }
+  #services a:hover {
+    opacity: 1;
+    background-position-x: 0;
+  }
+  #services .github {
+    height: 36px;
+  }
+  #services .github a {
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    -webkit-mask-image: url("/images/buttons/github/text.png");
+    -webkit-mask-size: auto 100%;
+    -webkit-mask-repeat: no-repeat;
+  }
+  #intro {
+    padding: 15px 50px;
+  }
+  #intro h2 {
+    margin: 30px 15px;
+    font-size: 94px;
+  }
+  #intro .likes .thumb {
+    width: 84px;
+  }
+  #intro .likes a {
+    width: 64px;
+  }
+  #news {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 60px;
+  }
+  #news h2 {
+    font-size: 28px;
+    line-height: 56px;
+  }
+  #news article {
+    margin-bottom: 50px;
+    padding: 15px 15px;
+  }
+}
+/* x-large */
+@media (min-width: 961px) and (min-height: 700px) {
+  #sidebar .logo,
+  #tagline-container {
+    top: 55%;
+  }
+  #menu .toggle,
+  #menu input[type=checkbox] {
+    display: none;
+  }
+  #menu ul {
+    display: block;
+  }
+  #intro-container ~ #news h2 {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 160px;
+    height: 60px;
+    margin: 0 0 0 -80px;
+    transition: top 0.5s ease-out;
+  }
+  #intro-container ~ #news h2 a {
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+  }
+  #intro-container ~ #news h2 + article {
+    margin-top: 68px;
+  }
+  #app.intro:not(.loading) #intro-container ~ #news h2 {
+    top: -75px;
+  }
+  #app.intro:not(.loading) #intro-container ~ #news h2 a {
+    background: rgba(0,0,0,0.5);
+    color: #e50;
+    transition: all 0.3s ease-out;
+  }
+  #app.intro:not(.loading) #intro-container ~ #news h2 a:hover {
+    background: #721;
+    color: #fff;
+  }
+  #news article + article {
+    margin-top: 30px;
+  }
+}
