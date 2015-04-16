@@ -1,5 +1,7 @@
 $(function () {
   $('#app').removeClass('loading');
+  $('#app').toggleClass('intro', $(window).scrollTop() == 0);
+  $('#app').toggleClass('reading', $(window).scrollTop() > 0);
 
   $(window).on('scroll', function () {
     $('#app').toggleClass('intro', $(window).scrollTop() == 0);

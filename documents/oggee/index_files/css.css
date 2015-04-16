@@ -1,0 +1,134 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 5:04:57 Dec 5, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:59:58 Apr 15, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+body {
+	background: #EDEDED;
+	padding-top: 3%;
+	padding-left: 50%;
+	margin-left: -300px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 10px;
+	color: #555555;
+}
+input {
+	border: 1px solid #fead00;
+	width: 100px;
+	height: 15px;
+}
+.submit {
+	background: #FFFFFF;
+	border: 1px solid #000000;
+	width: 100px;
+	height: 19px;
+}
+textarea {
+	border: 1px solid #fead00;
+	width: 200px;
+	height: 125px;
+}
+img {
+	border: 0px;
+}
+hr {
+	border: 0px;
+	height: 1px;
+	background: #fead00;
+	color: #fead00;
+}
+.top {
+  position: relative;
+  background: #f89900;
+  border-radius: 15px 15px 0 0;
+	width: 580px;
+	height: 60px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0px;
+	font-family: trebuchet, verdana;
+	font-size: 10px;
+	font-weight: bold;
+}
+#restored-logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  color: #fff;
+}
+.top .menu {
+	margin-left: 314px;
+	padding-top: 42px;
+}
+.top a {
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 3px;
+}
+.top a:hover {
+	text-decoration: none;
+	color: #000000;
+	padding: 3pxpx;
+}
+.main {
+	background: #FFFFFF url(/web/20041205050457/http://www.oggee.com/img/line.png) repeat-y;
+	width: 584px;
+	height: 400px;
+	overflow: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin: 0px;
+}
+.main a {
+	text-decoration: none;
+	color: #FF7701;
+}
+.main a:hover {
+	text-decoration: none;
+	color: #CC3300;
+}
+
+.footer {
+  background: #f89900;
+  border-radius: 0 0 15px 15px;
+	width: 360px;
+	height: 23px;
+	font-weight: normal;
+	color: #FFFFFF;
+	padding-left: 120px;
+	padding-right: 120px;
+	padding-top: 7px;
+	margin: 0px;
+}
+.footer a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.footer a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+.bt {
+	font-family: verdana;
+	font-size: 15px;
+	font-weight: bold;
+	color: #555555;
+}
+.mt {
+	font-family: verdana;
+	font-size: 11px;
+	font-weight: bold;
+	color: #555555;
+}

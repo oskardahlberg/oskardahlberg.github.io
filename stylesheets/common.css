@@ -1,0 +1,48 @@
+@import 'normalize.css';
+@import 'pure.css';
+@import 'ansonregular.css';
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 150%;
+}
+.logo {
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  font-family: 'ansonregular';
+  color: #fff;
+}
+.logo span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  line-height: 75%;
+  font-size: 50%;
+  font-weight: bold;
+  color: #e90;
+}
+.aligner {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.aligner > div {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}

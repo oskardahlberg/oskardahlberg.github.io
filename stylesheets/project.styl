@@ -1,0 +1,80 @@
+@import 'common';
+
+body {
+  padding: 50px 5px;
+  font-size: 14px;
+}
+
+a {
+  color: #921;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e90;
+}
+
+#sidebar-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  background: #e90;
+}
+
+#sidebar, article {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+#sidebar .logo {
+  height: 29px;
+  font-size: 18px;
+  line-height: 10px;
+  
+  span {
+    color: #a31;
+  }
+  
+  &:hover {
+    color: #a31;
+  }
+}
+
+article {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    color: #666;
+    
+    a {
+      color: #444;
+    }
+    
+    a:hover {
+      color: #e90;
+    }
+  }
+  
+  .date {
+    font-style: italic;
+    color: #aaa;
+  }
+  
+  img {
+    max-width: 100%;
+    max-height: 240px;
+    
+    padding: 4px;
+  }
+}
+
+@media (min-width: 541px) {
+  body {
+    font-size: 19px;
+  }
+  
+  article h1 {
+    font-size: 250%;
+  }
+}
