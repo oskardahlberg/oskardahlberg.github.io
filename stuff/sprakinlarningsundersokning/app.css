@@ -5,6 +5,11 @@
 body {
   font-family: sans-serif;
   font-size: 15px;
+  padding-top: 10px;
+}
+
+input, select {
+  font-size: 100%;
 }
 
 #container {
@@ -63,7 +68,6 @@ body {
   color: #aaa;
   content: '\25C6';
   line-height: 25px;
-  font-size: 20px;
 }
 
 .scale {
@@ -106,7 +110,6 @@ body {
   width: 9.0909%;
   border: 1px solid #ccc;
   border-right: 0;
-  font-size: 100%;
   text-align: center;
   height: 30px;
 }
