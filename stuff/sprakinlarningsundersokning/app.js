@@ -299,10 +299,10 @@ var scales = {
 
 var triplets = {
   1: ['omtyckt', 'folklig', 'populär'],
-  //2: ['gäng', 'grupp', 'sällskap'],
-  //3: ['resa', 'färd', 'tur'],
-  //4: ['glädje', 'lycka', 'nöje'],
-  //5: ['kränkt', 'förolämpad', 'stött']
+  2: ['gäng', 'grupp', 'sällskap'],
+  3: ['resa', 'färd', 'tur'],
+  4: ['glädje', 'lycka', 'nöje'],
+  5: ['kränkt', 'förolämpad', 'stött']
 }
 
 var formURL = 'https://script.google.com/macros/s/AKfycbwurCIztXn9di-eX5XvjJKJ2fqaxKNsa5w2aGzjx-KN3JHw_ts/exec'
