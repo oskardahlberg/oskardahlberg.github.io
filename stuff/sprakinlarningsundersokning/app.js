@@ -127,7 +127,7 @@ function createTriplet(name, a, b, c, scales) {
 function createTripletForm(triplets, scales, onSubmit) {
   var el = document.createElement('div')
   el.className = 'TripletForm'
-  el.innerHTML = '<h2>Undersökning</h2>'
+  el.innerHTML = '<h2>UndersÃ¶kning</h2>'
 
   var submits = {}
 
@@ -174,7 +174,7 @@ function createRespondentForm() {
 
   var sweEl = document.createElement('div')
   sweEl.class = 'question'
-  sweEl.innerHTML = '<div>Är Svenska ditt modersmål?</div>'
+  sweEl.innerHTML = '<div>Ã„r Svenska ditt modersmÃ¥l?</div>'
   sweEl.appendChild(sweSelect)
 
   var first_langInput = document.createElement('input')
@@ -182,7 +182,7 @@ function createRespondentForm() {
 
   var first_langEl = document.createElement('div')
   first_langEl.class = 'question'
-  first_langEl.innerHTML = '<div>Vilket är ditt modersmål?</div>'
+  first_langEl.innerHTML = '<div>Vilket Ã¤r ditt modersmÃ¥l?</div>'
   first_langEl.appendChild(first_langInput)
 
   var swe_yearsInput = document.createElement('input')
@@ -190,41 +190,41 @@ function createRespondentForm() {
 
   var swe_yearsEl = document.createElement('div')
   swe_yearsEl.class = 'question'
-  swe_yearsEl.innerHTML = '<div>Hur många års erfarenhet har du av Svenska?</div>'
+  swe_yearsEl.innerHTML = '<div>Hur mÃ¥nga Ã¥rs erfarenhet har du av Svenska?</div>'
   swe_yearsEl.appendChild(swe_yearsInput)
 
   var news_readSelect = document.createElement('select')
   news_readSelect.innerHTML =
-    '<option value="0">Mycket lätt</option>' +
-    '<option value="1">Ganska lätt</option>' +
-    '<option value="2">Ganska svårt</option>' +
-    '<option value="3">Mycket svårt</option>'
+    '<option value="0">Mycket lÃ¤tt</option>' +
+    '<option value="1">Ganska lÃ¤tt</option>' +
+    '<option value="2">Ganska svÃ¥rt</option>' +
+    '<option value="3">Mycket svÃ¥rt</option>'
 
   var news_readEl = document.createElement('div')
   news_readEl.class = 'question'
   news_readEl.innerHTML =
-    '<div>Hur lätt har du att förstå innehållet i en svensk tidning som ' +
+    '<div>Hur lÃ¤tt har du att fÃ¶rstÃ¥ innehÃ¥llet i en svensk tidning som ' +
     't.ex. Dagens Nyheter, Svenska Dagbladet eller Aftonbladet?</div>'
   news_readEl.appendChild(news_readSelect)
 
   var news_listenSelect = document.createElement('select')
   news_listenSelect.innerHTML =
-    '<option value="0">Mycket lätt</option>' +
-    '<option value="1">Ganska lätt</option>' +
-    '<option value="2">Ganska svårt</option>' +
-    '<option value="3">Mycket svårt</option>'
+    '<option value="0">Mycket lÃ¤tt</option>' +
+    '<option value="1">Ganska lÃ¤tt</option>' +
+    '<option value="2">Ganska svÃ¥rt</option>' +
+    '<option value="3">Mycket svÃ¥rt</option>'
 
   var news_listenEl = document.createElement('div')
   news_listenEl.class = 'question'
   news_listenEl.innerHTML =
-    '<div>Hur lätt har du att förstå innehållet i ett svenskt ' +
-    'nyhetsreportage på radio eller TV?</div>'
+    '<div>Hur lÃ¤tt har du att fÃ¶rstÃ¥ innehÃ¥llet i ett svenskt ' +
+    'nyhetsreportage pÃ¥ radio eller TV?</div>'
   news_listenEl.appendChild(news_listenSelect)
 
   var l2El = document.createElement('div')
   l2El.className = 'l2'
   l2El.innerHTML =
-    '<h3>Frågor till dig som inte har Svenska som modersmål</h3>'
+    '<h3>FrÃ¥gor till dig som inte har Svenska som modersmÃ¥l</h3>'
   l2El.appendChild(first_langEl)
   l2El.appendChild(swe_yearsEl)
   l2El.appendChild(news_readEl)
@@ -269,7 +269,7 @@ function createForm(triplets, scales, onSubmit) {
     var result = tripletForm.submit()
     if (result === null) {
       alert(
-        'Något fält är inte korrrekt ifyllt! Var vänlig att kontrollera dina ' +
+        'NÃ¥got fÃ¤lt Ã¤r inte korrrekt ifyllt! Var vÃ¤nlig att kontrollera dina ' +
         'svar.'
       )
       return
@@ -291,18 +291,18 @@ function createForm(triplets, scales, onSubmit) {
 }
 
 var scales = {
-  ls: { left: 'långsam', right: 'snabb' },
-  pa: { left: 'privat', right: 'allmän' },
+  ls: { left: 'lÃ¥ngsam', right: 'snabb' },
+  pa: { left: 'privat', right: 'allmÃ¤n' },
   np: { left: 'negativ', right: 'positiv' },
-  df: { left: 'dåtid', right: 'framtid' }
+  df: { left: 'dÃ¥tid', right: 'framtid' }
 }
 
 var triplets = {
-  1: ['omtyckt', 'folklig', 'populär'],
-  //2: ['gäng', 'grupp', 'sällskap'],
-  //3: ['resa', 'färd', 'tur'],
-  //4: ['glädje', 'lycka', 'nöje'],
-  //5: ['kränkt', 'förolämpad', 'stött']
+  1: ['omtyckt', 'folklig', 'populÃ¤r'],
+  //2: ['gÃ¤ng', 'grupp', 'sÃ¤llskap'],
+  //3: ['resa', 'fÃ¤rd', 'tur'],
+  //4: ['glÃ¤dje', 'lycka', 'nÃ¶je'],
+  //5: ['krÃ¤nkt', 'fÃ¶rolÃ¤mpad', 'stÃ¶tt']
 }
 
 var formURL = 'https://script.google.com/macros/s/AKfycbwurCIztXn9di-eX5XvjJKJ2fqaxKNsa5w2aGzjx-KN3JHw_ts/exec'
@@ -322,12 +322,12 @@ function init() {
 
       fetch(formURL + '?' + params.join('&')).then(function () {
         alert(
-          'Tack för att du deltagit i vår undersökning! Du kan nu stänga sidan.'
+          'Tack fÃ¶r att du deltagit i vÃ¥r undersÃ¶kning! Du kan nu stÃ¤nga sidan.'
         )
       }).catch(function () {
         enableButton()
         alert(
-          'Ett okänt fel har uppstått, var vänlig att försöka igen om en liten ' +
+          'Ett okÃ¤nt fel har uppstÃ¥tt, var vÃ¤nlig att fÃ¶rsÃ¶ka igen om en liten ' +
           'stund.'
         )
       })
