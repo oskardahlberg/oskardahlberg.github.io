@@ -108,6 +108,7 @@ input, select {
 
 .inputs input {
   width: 9.0909%;
+  border-radius: 0;
   border: 1px solid #ccc;
   border-right: 0;
   text-align: center;

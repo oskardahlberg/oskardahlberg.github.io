@@ -272,6 +272,7 @@ function createForm(triplets, scales, onSubmit) {
         'Något fält är inte korrrekt ifyllt! Var vänlig att kontrollera dina ' +
         'svar.'
       )
+      enableButton()
       return
     }
 
