@@ -230,7 +230,7 @@ function createRespondentForm() {
   l2El.appendChild(news_readEl)
   l2El.appendChild(news_listenEl)
 
-  var el = document.createElement('respondent')
+  var el = document.createElement('div')
   el.className = 'RespondentForm'
   el.appendChild(header)
   el.appendChild(sweEl)
@@ -321,6 +321,27 @@ function init() {
         params.push(key + '=' + encodeURIComponent(result[key]))
       }
 
+      var req = new XMLHttpRequest()
+      req.onreadystatechange = function () {
+        if (this.readyState !== 4) return
+
+        if (this.status === 200) {
+          alert(
+            'Tack för att du deltagit i vår undersökning! Du kan nu stänga sidan.'
+          )
+        }
+        else {
+          enableButton()
+          alert(
+            'Ett okänt fel har uppstått, var vänlig att försöka igen om en liten ' +
+            'stund.'
+          )
+        }
+      }      
+      req.open('GET', formURL + '?' + params.join('&'))
+      req.send()
+
+      /*
       fetch(formURL + '?' + params.join('&')).then(function () {
         alert(
           'Tack för att du deltagit i vår undersökning! Du kan nu stänga sidan.'
@@ -331,7 +352,7 @@ function init() {
           'Ett okänt fel har uppstått, var vänlig att försöka igen om en liten ' +
           'stund.'
         )
-      })
+      })*/
     })
   )
 }
