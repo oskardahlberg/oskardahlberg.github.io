@@ -325,16 +325,17 @@ function init() {
       req.onreadystatechange = function () {
         if (this.readyState !== 4) return
 
-        if (this.status === 200) {
+        if (this.status === 200 || this.status === 302) {
           alert(
-            'Tack för att du deltagit i vår undersökning! Du kan nu stänga sidan.'
+            'Tack för att du deltagit i vår undersökning! Du kan nu stänga ' +
+            'sidan.'
           )
         }
         else {
           enableButton()
           alert(
-            'Ett okänt fel har uppstått, var vänlig att försöka igen om en liten ' +
-            'stund.'
+            'Ett okänt fel har uppstått, var vänlig att försöka igen om en ' +
+            'liten stund.'
           )
         }
       }      
