@@ -1,0 +1,85 @@
+:root {
+  --background: #000;
+  --light-background: #060504;
+  --color: #fed;
+  --border: 1px solid #234;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--background);
+  color: var(--color);
+}
+
+input, select, button {
+  background: var(--light-background);
+  color: var(--color);
+  border: var(--border);  
+}
+
+input[type="range"] {
+  vertical-align: bottom;
+}
+
+#container {
+  display: flex;
+  height: 100%;
+}
+
+#composer {
+  position: relative;
+  flex: 1;
+  min-width: 275px;
+  max-width: 275px;
+  height: 100%;
+  border-right: var(--border);
+  overflow: auto;
+  background: var(--light-background);
+}
+
+#composer > div {
+  position: absolute;
+}
+
+#viewer {
+  flex: 1;
+}
+
+.Composer .count {
+  padding: 5px;
+  border-bottom: var(--border);
+}
+
+.Composer .count label {
+  display: inline-block;
+  width: 60px;
+}
+
+.ComposerLayer {
+  padding: 8px;
+  border-bottom: var(--border);
+}
+
+.ComposerLayer .fields > div {
+  margin-bottom: 5px;
+  font-size: 85%;
+}
+
+.ComposerLayer .fields label {
+  display: inline-block;
+  width: 70px;
+}
+
+.ComposerLayer canvas {
+  border: var(--border);
+}
