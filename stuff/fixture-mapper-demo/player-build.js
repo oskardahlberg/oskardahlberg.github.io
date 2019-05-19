@@ -3117,7 +3117,7 @@ const init = () => {
     bumps: 6,
     holeCount: 2,
     holeSize: 3,
-    triangleSize: Math.floor(width / 22),
+    triangleSize: Math.floor(width / 20),
     pixelsPerSide: 3
   })
 
